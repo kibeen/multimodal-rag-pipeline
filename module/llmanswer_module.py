@@ -20,11 +20,6 @@ class MultiModalLLMAnswerRAGModule(BaseRAGModule):
         if base64_image:
             # print("---멀티모달 데이터 기반 답변 생성---")
             print("---Multimodal Data-based Answer Generation---")
-            # [지시사항 1] 멀티모달 질의응답 모듈을 완성하세요.
-            # 이미지와 질문을 함께 입력하여 답변을 생성합니다.
-            # Hint 1. HumanMessage 객체의 content 인자로 질문 (query)과 이미지 데이터(base64_image)를 함께 입력합니다.
-            # Hint 2. 이미지 데이터는 "image_url" 타입으로 입력합니다.
-            #################################################
             message = HumanMessage(
                 content=[
                     {"type": "text", "text": query},

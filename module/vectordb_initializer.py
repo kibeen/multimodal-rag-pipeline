@@ -60,13 +60,9 @@ def init_multimodal_retriever(
                         os.path.join(root, file), page_idx
                     )
                     if is_loading:
-                        # [지시사항 2]. Base64 인코딩된 각 페이지에 대한 설명문을 생성하고, page_summary_texts에 추가하세요.
-                        # Hint 1. query_about_image 함수를 사용하여 이미지와 관련된 질문을 생성합니다.
-                        #################################################
                         query = "Describe the content of this document page in detail for retrieval."
                         response = query_about_image({"query": query, "base64_image": base64_image})
                         page_summary_texts.append(response)
-                        #################################################
 
                     base64_images.append(base64_image)
 
